@@ -34,8 +34,10 @@
 
   <div class="view-container">
     <!-- below you can see ui-view being pushed into this div, from the app.js templateurl property -->
-    <div ui-view></div>
+    <div ui-view></div> 
+    <!-- could also use <ui-view> </ui-view>, to import in this page's ui-view -->
   </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
@@ -49,7 +51,7 @@
 <!--  from the top, user lands on "/"
 landing page's controller is invoked (like productsCtrl seen above)
 productsCtrl has productsSrvc passed into it's anon function
-it runs productsSrvc.functionInSrvc, that data is later used in productsTmpl.html -->
+it runs productsSrvc.functionInSrvc, that productsCtrl passes to productsTmpl.html later on -->
 
 
 

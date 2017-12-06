@@ -8,13 +8,13 @@ angular
       .state("home", {
         url: "/",
         templateUrl: "js/home/homeTmpl.html" //can put a div in `back ticks`, like template: `<div> Home </div>
-        // can solo add controller: 'whateverCtrl' here. This attaches the controller to the state you view here.
+        // can also add controller: 'whateverCtrl' here. This attaches the controller to the state you view here.
       })
       .state("products", {
         url: "/products/:id",
         templateUrl: "js/products/productsTmpl.html", // these paths are referenced from the root directory, where the 
         // server is ran.
-        controller: "productsCtrl"
+        controller: "productsCtrl" // if controller doesn't do a lot, you can inline function with anonymous function I think.
       })
       .state("settings", {
         url: "/settings",
