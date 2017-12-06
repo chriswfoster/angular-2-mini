@@ -12,7 +12,8 @@ angular
       })
       .state("products", {
         url: "/products/:id",
-        templateUrl: "js/products/productsTmpl.html",
+        templateUrl: "js/products/productsTmpl.html", // these paths are referenced from the root directory, where the 
+        // server is ran.
         controller: "productsCtrl"
       })
       .state("settings", {
