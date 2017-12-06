@@ -5,8 +5,8 @@ angular
     //then put {{ test }} on your index.html, after adding script tags for productSrvc and ~Ctrl  in bottom of index.html
 
     if ($stateParams.id === "shoes") {
-      productsSrvc.getShoeData().then(function(response) {
-        // productServc gomes from productsSrvc.js, where it runs
+      productsSrvc.getShoeData().then(function(response) { // a promise is returned here
+        // productServc comes from productsSrvc.js, where it runs
         // a get similar to axios get.
         $scope.productData = response.data
       })

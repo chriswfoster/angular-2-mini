@@ -23,9 +23,9 @@ angular.module("myApp").service("productsSrvc", function($http) {
 })
 
 //     CAN ALSO DO:
-// this.getSocksInfo = function(){
+// this.getSocksInfo = function(category){
 //   return $http
-//   .get("https://swapi.co/api/people")
+//   .get(`https://practiceapi.devmountain.com/products?category=${category}`)
 //   .then (response => {
 //     console.log(response)
 //     socks = response.data.results
