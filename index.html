@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-  <head>
-    <title>Routing App</title>
-    <link type="text/css" rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
+<head>
+  <title>Routing App</title>
+  <link type="text/css" rel="stylesheet" href="styles.css" />
+</head>
 
-    <!-- YOU CAN INJECT A DIV HERE WITH <ui-view> </ui-view>, THAT'LL BE IMPORTED FROM 
+<body>
+
+  <!-- YOU CAN INJECT A DIV HERE WITH <ui-view> </ui-view>, THAT'LL BE IMPORTED FROM 
       YOUR APP.JS, TEMPLATEURL: MENTIONED IN MY COMMENTS -->
-    <div class="menu">
-      <ul>
-        <li><a ui-sref="home">Home</a></li>
-        <li>
-          Products
-          <ul>
-            <li><a ui-sref="products({id: 'shoes'})">Shoes</a></li>
-            <li><a ui-sref="products({id: 'socks'})">Socks</a></li>
-          </ul>
-        </li>
-        <li><a ui-sref="settings"> Settings </a></li>
-      </ul>
-    </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <a ui-sref="home">Home</a>
+      </li>
+      <li>
+        Products
+        <ul>
+          <li>
+            <a ui-sref="products({id: 'shoes'})">Shoes</a>
+          </li>
+          <li>
+            <a ui-sref="products({id: 'socks'})">Socks</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a ui-sref="settings"> Settings </a>
+      </li>
+    </ul>
+  </div>
 
-    <div class="view-container">
-      <!-- below you can see ui-view being pushed into this div, from the app.js templateurl property -->
-      <div ui-view></div> 
-    </div>
+  <div class="view-container">
+    <!-- below you can see ui-view being pushed into this div, from the app.js templateurl property -->
+    <div ui-view></div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/products/productsCtrl.js"></script>
-    <script type="text/javascript" src="js/products/productsSrvc.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/products/productsCtrl.js"></script>
+  <script type="text/javascript" src="js/products/productsSrvc.js"></script>
+</body>
+
 </html>
+
+<!--  from the top, user lands on "/"
+landing page's controller is invoked (like productsCtrl seen above)
+productsCtrl has productsSrvc passed into it's anon function
+it runs productsSrvc.functionInSrvc, that data is later used in productsTmpl.html -->
+
 
 
 <!-- YOU CAN USE [BACKETS] IN CSS TO SPECIFY WHAT ANGULAR ATTRIBUTES RECEIVE SPECIFIC STYLES
