@@ -2,8 +2,7 @@ angular.module("myApp").service("productsSrvc", function($http) {
   //called with a new keyword, returns an object.
   // we brought $http in so we can use $http to make the requests, just as axios makes requests
 
- // CAN TEST WITH this.test = "this is working"
-
+  // CAN TEST WITH this.test = "this is working"
 
   // var socks = []; SEE LAST COMMENTS FOR THIS EXPLANATION
 
