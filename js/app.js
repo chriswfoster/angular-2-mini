@@ -1,5 +1,5 @@
 angular
-  .module("myApp", [ui.router])
+  .module("myApp", ["ui.router"])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state("home", {
@@ -12,8 +12,9 @@ angular
         controller: "productsCtrl"
       })
       .state("settings", {
-        url: "/settigs",
+        url: "/settings",
         templateUrl: "js/settings/settingsTmpl.html"
       })
+
     $urlRouterProvider.otherwise("/")
   })
